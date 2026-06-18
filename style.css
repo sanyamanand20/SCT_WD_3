@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #121213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    background: #1e1e24;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #00adb5;
+    font-weight: 600;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.cell {
+    background: #2a2a35;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    user-select: none;
+}
+
+.cell:hover {
+    background: #333344;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+/* Color coding X and O */
+.cell.X {
+    color: #00adb5;
+}
+
+.cell.O {
+    color: #ff5722;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: #393e46;
+    color: #eee;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #00adb5;
+    color: #fff;
+    transform: translateY(-2px);
+}
